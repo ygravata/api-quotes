@@ -3,22 +3,6 @@ class Api::V1::QuotesController < Api::V1::ApplicationController
   require 'open-uri'
   require 'nokogiri'
   
-  # def search_tag
-  #   @search_tag = SearchTag.find_by(name: params[:search_tag])
-  #   if @search_tag.searched == true
-  #     @quotes = set_quotes(@search_tag)
-  #   elsif @search_tag.searched == false
-  #     scrapping_quotes(@search_tag)
-  #     @search_tag.searched = true
-  #     @search_tag.save
-  #     @quotes = set_quotes(@search_tag)
-  #   else
-  #     @new_search_tag = SearchTag.create!(name: params[:search_tag])
-  #     scrapping_quotes(@new_search_tag)
-  #     @quotes = Quote.where(search_tag_id: @new_search_tag.id).to_a       
-  #   end
-  # end
-
   def search
   # method to verify if the tag inserted into the endpoint was previously searched or not
     
@@ -82,9 +66,5 @@ class Api::V1::QuotesController < Api::V1::ApplicationController
       quote
     end
   end
-
-  # def set_quotes(search_tag_param)
-  #   Quote.where(search_tag_id: search_tag_param.id).to_a 
-  # end
  
 end
