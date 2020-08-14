@@ -5,6 +5,7 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+# Mongoid DB setting
 gem 'mongoid', '~> 7.0.5'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -17,14 +18,14 @@ gem 'jbuilder', '~> 2.7'
 
 # Authenticate users
 gem 'devise'
+# authtenticate token
 gem 'simple_token_authentication' # see semver.org
-gem 'pundit'
+# gem 'pundit'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# Mongoid DB setting
-
+# wraps webpack 
 gem "webpacker"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
