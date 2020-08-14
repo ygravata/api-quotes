@@ -5,8 +5,7 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
-# Authenticate users
-gem 'devise'
+gem 'mongoid', '~> 7.0.5'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -16,11 +15,15 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Authenticate users
+gem 'devise'
+gem 'simple_token_authentication' # see semver.org
+gem 'pundit'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Mongoid DB setting
-gem 'mongoid', '~> 7.0.5'
 
 gem "webpacker"
 
